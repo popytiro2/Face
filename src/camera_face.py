@@ -12,11 +12,11 @@ cap=cv2.VideoCapture(0) #0にするとmacbookのカメラ、1にすると外付�
 cascade_path = '/Users/yuki-fu/.pyenv/versions/3.9.13/lib/python3.9/site-packages/cv2/data/haarcascade_frontalface_alt.xml'
 cascade = cv2.CascadeClassifier(cascade_path)
 
-dir = "/Users/yuki-fu/Desktop/boost2022/src/CameraSwitch4DL/picture/" # 写真を格納するフォルダを指定
+dir = "/Users/yuki-fu/Desktop/boost2022/src/CameraSwitch4DL/img/" # 写真を格納するフォルダを指定
 
 num=300 # 欲しいファイルの数
 label = str(input("人を判別するを半角英数3文字でで入力してください ex.slf："))
-file_number = len(glob.glob('Users/yuki-fu/Desktop/boost2022/src/CameraSwitch4DL/picture/*')) #現在のフォルダ内のファイル数
+file_number = len(glob.glob('Users/yuki-fu/Desktop/boost2022/src/CameraSwitch4DL/img/*')) #現在のフォルダ内のファイル数
 count = 0 #撮影した写真枚数の初期値
 
 #ラベルの文字数を確認
@@ -57,7 +57,7 @@ while True:
                 cv2.imwrite(dir+label+"__"+str(now)+'.jpg', roi)
 
         #現在の写真枚数から初期値を減産して、今回撮影した写真の枚数をカウント
-        count = len(glob.glob('/Users/yuki-fu/Desktop/boost2022/src/CameraSwitch4DL/picture/*')) - file_number
+        count = len(glob.glob('/Users/yuki-fu/Desktop/boost2022/src/CameraSwitch4DL/img/*')) - file_number
 
     #フォルダの中に保存された写真の枚数がnumを満たしたので撮影を終える
     else:
