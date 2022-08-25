@@ -5,7 +5,7 @@
 ### STEP1. PC内蔵カメラを使って顔写真の収集
 - camera_face.py
 ### STEP2. 学習モデルの作成
-- L_svm.py
+- ML_svm.py
 ### STEP３. リアルタイム顔識別の実行
 - face_recognizer.py
 
